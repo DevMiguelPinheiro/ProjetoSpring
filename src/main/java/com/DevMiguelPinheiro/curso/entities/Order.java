@@ -29,6 +29,12 @@ public class Order implements Serializable {
 	@JoinColumn(name = "client_id")
 	private User client;
 
+	
+	
+	public Order() {
+		
+	}
+
 	public Order(Long id, Instant moment, User client) {
 		super();
 		this.id = id;
