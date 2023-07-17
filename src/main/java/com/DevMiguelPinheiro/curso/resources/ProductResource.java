@@ -13,7 +13,7 @@ import com.DevMiguelPinheiro.curso.entities.Product;
 import com.DevMiguelPinheiro.curso.services.ProductService;
 
 @RestController
-@RequestMapping(value = "/categories")
+@RequestMapping(value = "/products")
 public class ProductResource {
 
 	@Autowired
