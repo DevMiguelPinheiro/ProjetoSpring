@@ -9,9 +9,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 // vai servir para popular o banco
 
+import com.DevMiguelPinheiro.curso.entities.Category;
 import com.DevMiguelPinheiro.curso.entities.Order;
 import com.DevMiguelPinheiro.curso.entities.User;
 import com.DevMiguelPinheiro.curso.entities.enums.OrderStatus;
+import com.DevMiguelPinheiro.curso.repositories.CategoryRepository;
 import com.DevMiguelPinheiro.curso.repositories.OrderRepository;
 import com.DevMiguelPinheiro.curso.repositories.UserRepository;
 
@@ -26,6 +28,9 @@ public class TestConfig implements CommandLineRunner {
 	@Autowired
 	private OrderRepository orderRepository;
 
+	@Autowired
+	private CategoryRepository catergoryRepository;
+	
 	@Override
 	public void run(String... args) throws Exception {
 
@@ -34,8 +39,13 @@ public class TestConfig implements CommandLineRunner {
 		Order o1 = new Order(null, Instant.parse("2019-06-20T19:53:07Z"),OrderStatus.PAID ,u1); 
 		Order o2 = new Order(null, Instant.parse("2019-07-21T03:42:10Z"),OrderStatus.WAITING_PAYMENT, u2); 
 		Order o3 = new Order(null, Instant.parse("2019-07-22T15:21:22Z"),OrderStatus.WAITING_PAYMENT, u1);
+		Category cat1 = new Category(null, "Electronics"); 
+		Category cat2 = new Category(null, "Books"); 
+		Category cat3 = new Category(null, "Computers");
+		
 		userRepository.saveAll(Arrays.asList(u1,u2));
 		orderRepository.saveAll(Arrays.asList(o1,o2,o3));
+		catergoryRepository.saveAll(Arrays.asList(cat1,cat2,cat3));
 	}
 
 }
