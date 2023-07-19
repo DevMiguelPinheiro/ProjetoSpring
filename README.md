@@ -24,10 +24,10 @@ Apache Tomcat
 # Requisitos
 Para executar este projeto, você precisará ter as seguintes ferramentas instaladas em seu sistema:
 
-JDK (Java Development Kit) 11 ou superior
+JDK (Java Development Kit) 17 ou superior
 Maven
 Um banco de dados suportado pelo Spring (como MySQL, PostgreSQL, H2, etc.)
-Apache Tomcat (versão X.X.X)
+Apache Tomcat 
 Como executar o projeto
 Clone este repositório para o seu sistema local.
 
@@ -54,4 +54,4 @@ Se você tiver alguma dúvida ou sugestão sobre este projeto, sinta-se à vonta
 Nome: Miguel Pinheiro
 E-mail: contatoMiguelPinheiroLeite@gmail.com
 
-Obrigado por visitar o ProjetoSpring! Esperamos que este projeto seja útil para você.
+Obrigado por visitar o ProjetoSpring! Espero que este projeto seja útil para você e possa tirar algum proveito dele.
